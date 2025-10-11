@@ -4,15 +4,16 @@
   </p>
 
 <!-- language -->
-[中文](./README_zh.md)| English 
+
+[中文](./README_zh.md)| English
 
 <!-- icon -->
 <br>
 
-[![stars](https://img.shields.io/github/stars/baidu-maps/mcp?color=ccf)](https://github.com/baidu-maps/mcp)
-![python](https://img.shields.io/badge/python-3.10～3.12-aff.svg)
+[![stars](https://img.shields.io/github/stars/rongquanfeng/baidu-maps-mcp?color=ccf)](https://github.com/rongquanfeng/baidu-maps-mcp)
+![python](https://img.shields.io/badge/python-3.11+-aff.svg)
 [![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![pypi](https://img.shields.io/pypi/v/mcp-server-baidu-maps)](https://pypi.org/project/mcp-server-baidu-maps/)
+[![pypi](https://img.shields.io/pypi/v/bach-baidu-maps)](https://pypi.org/project/bach-baidu-maps/)
 [![npm](https://img.shields.io/npm/v/@baidumap/mcp-server-baidu-map)](https://www.npmjs.com/package/@baidumap/mcp-server-baidu-map)
 
 </div>
@@ -25,6 +26,7 @@
 With Baidu Map MCP Server, you can easily empower your applications, LLMs, and agents with advanced mapping, geocoding, POI search, route planning, weather, traffic, and more — all via standardized, developer-friendly MCP interfaces.
 
 **Key Features:**
+
 - **Full MCP Protocol Support:** Seamless integration with any MCP-compliant agent, LLM, or platform.
 - **Rich LBS Capabilities:** Geocoding, reverse geocoding, POI search, route planning (driving, walking, cycling, transit), weather, IP location, real-time traffic, and more.
 - **Cross-Platform SDKs:** Official Python and TypeScript SDKs, easy CLI and cloud deployment.
@@ -35,6 +37,7 @@ With Baidu Map MCP Server, you can easily empower your applications, LLMs, and a
 Whether you are building a travel assistant, logistics platform, smart city solution, or an LLM-powered agent, Baidu Map MCP Server provides the essential geospatial intelligence and tools you need.
 
 The MCP Server architecture enables:
+
 - **Seamless AI Integration**: Allows LLMs and agents to understand and process location data naturally
 - **Contextual Understanding**: Provides rich geospatial context for more intelligent decision-making
 - **Standardized Interfaces**: Consistent API design following MCP principles for easy integration
@@ -42,25 +45,24 @@ The MCP Server architecture enables:
 
 Whether you're building a navigation app, delivery service, smart city solution, or enhancing an AI agent with location awareness, Baidu Map MCP Server provides the tools and infrastructure you need to succeed.
 
-
 ## 🛠️ Supported Tools & APIs
 
 Baidu Map MCP Server provides the following MCP-compliant APIs (tools):
 
-| Tool Name                | Description                                                                                  |
-|--------------------------|----------------------------------------------------------------------------------------------|
-| `map_geocode`            | Convert address to geographic coordinates.                                                   |
-| `map_reverse_geocode`    | Get address, region, and POI info from coordinates.                                         |
-| `map_search_places`      | Search for global POIs by keyword, type, region, or within a radius.                               |
-| `map_place_details`      | Get detailed info for a POI by its unique ID.                                               |
-| `map_directions_matrix`  | Batch route planning for multiple origins/destinations (driving, walking, cycling).         |
-| `map_directions`         | Plan routes between two points (driving, walking, cycling, transit).                        |
-| `map_weather`            | Query real-time and forecast weather by region or coordinates.                              |
-| `map_ip_location`        | Locate city and coordinates by IP address.                                                  |
-| `map_road_traffic`       | Query real-time traffic conditions for roads or regions.                                    |
-| `map_poi_extract`*       | Extract POI info from free text (requires advanced permission).                             |
+| Tool Name               | Description                                                                         |
+| ----------------------- | ----------------------------------------------------------------------------------- |
+| `map_geocode`           | Convert address to geographic coordinates.                                          |
+| `map_reverse_geocode`   | Get address, region, and POI info from coordinates.                                 |
+| `map_search_places`     | Search for global POIs by keyword, type, region, or within a radius.                |
+| `map_place_details`     | Get detailed info for a POI by its unique ID.                                       |
+| `map_directions_matrix` | Batch route planning for multiple origins/destinations (driving, walking, cycling). |
+| `map_directions`        | Plan routes between two points (driving, walking, cycling, transit).                |
+| `map_weather`           | Query real-time and forecast weather by region or coordinates.                      |
+| `map_ip_location`       | Locate city and coordinates by IP address.                                          |
+| `map_road_traffic`      | Query real-time traffic conditions for roads or regions.                            |
+| `map_poi_extract`\*     | Extract POI info from free text (requires advanced permission).                     |
 
-> *Some advanced features require additional permissions. See [Authorization](#authorization) for details.
+> \*Some advanced features require additional permissions. See [Authorization](#authorization) for details.
 
 All APIs follow the MCP protocol and can be called from any MCP-compliant client, LLM, or agent platform.
 
@@ -74,22 +76,31 @@ Register and create a server-side API Key (AK) at [Baidu Maps Open Platform](htt
 ### 2. Python Integration
 
 Install the SDK:
+
 ```bash
-pip install mcp-server-baidu-maps
+pip install bach-baidu-maps
+```
+
+**Quick Start with UVX (Recommended):**
+
+```bash
+uvx bach-baidu-maps
 ```
 
 **Run as a script:**
+
 ```bash
-python -m mcp_server_baidu_maps
+bach-baidu-maps
 ```
 
 **Configure in your MCP client (e.g., Claude, Cursor):**
+
 ```json
 {
   "mcpServers": {
     "baidu-maps": {
-      "command": "python",
-      "args": ["-m", "mcp_server_baidu_maps"],
+      "command": "uvx",
+      "args": ["bach-baidu-maps"],
       "env": {
         "BAIDU_MAPS_API_KEY": "<YOUR_API_KEY>"
       }
@@ -101,20 +112,19 @@ python -m mcp_server_baidu_maps
 ### 3. Node.js/TypeScript Integration
 
 Install:
+
 ```bash
 npm install @baidumap/mcp-server-baidu-map
 ```
 
 **Configure in your MCP client:**
+
 ```json
 {
   "mcpServers": {
     "baidu-map": {
       "command": "npx",
-      "args": [
-        "-y",
-        "@baidumap/mcp-server-baidu-map"
-      ],
+      "args": ["-y", "@baidumap/mcp-server-baidu-map"],
       "env": {
         "BAIDU_MAP_API_KEY": "<YOUR_API_KEY>"
       }
@@ -129,7 +139,7 @@ See [SSE Quickstart](https://lbsyun.baidu.com/faq/api?title=mcpserver/quickstart
 
 ### 5. More Platforms
 
-- **Claude/Agent/千帆AppBuilder**: See [README_zh.md](./README_zh.md) for detailed integration guides and advanced configuration.
+- **Claude/Agent/千帆 AppBuilder**: See [README_zh.md](./README_zh.md) for detailed integration guides and advanced configuration.
 
 ---
 
@@ -155,6 +165,7 @@ See [SSE Quickstart](https://lbsyun.baidu.com/faq/api?title=mcpserver/quickstart
 ---
 
 ## ⛰️ Advanced Tutorials
+
 - [Geocoding API Guide](https://lbsyun.baidu.com/index.php?title=webapi/guide/webservice-geocoding)
 - [POI Search API Guide](https://lbsyun.baidu.com/index.php?title=webapi/guide/webservice-placeapi)
 - [Route Planning API Guide](https://lbsyun.baidu.com/index.php?title=webapi/direction-api)
@@ -163,15 +174,14 @@ See [SSE Quickstart](https://lbsyun.baidu.com/faq/api?title=mcpserver/quickstart
 
 ## 👩‍👩‍👧‍👦 Contributors
 
-<a href="https://github.com/baidu-maps/mcp/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=baidu-maps/mcp&max=400&columns=20"  width="200"/>
+<a href="https://github.com/rongquanfeng/baidu-maps-mcp/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=rongquanfeng/baidu-maps-mcp&max=400&columns=20"  width="200"/>
 </a>
-
 
 ## 🌟 Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=baidu-maps/mcp&type=Date)](https://star-history.com/#baidu-maps/mcp&Date)
-
+[![Star History Chart](https://api.star-history.com/svg?repos=rongquanfeng/baidu-maps-mcp&type=Date)](https://star-history.com/#rongquanfeng/baidu-maps-mcp&Date)
 
 ## 📄 License
+
 [MIT](./LICENSE) © baidu-maps

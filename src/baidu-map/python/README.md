@@ -5,7 +5,7 @@
 #### 使用 UVX 一键启动
 
 ```bash
-uvx mcp-server-baidu-maps-enhanced
+uvx bach-baidu-maps
 ```
 
 #### 在 Cursor/Cherry Studio 中配置
@@ -13,9 +13,9 @@ uvx mcp-server-baidu-maps-enhanced
 ```json
 {
   "mcpServers": {
-    "baidu-maps-enhanced": {
+    "baidu-maps": {
       "command": "uvx",
-      "args": ["mcp-server-baidu-maps-enhanced"],
+      "args": ["bach-baidu-maps"],
       "env": {
         "BAIDU_MAPS_API_KEY": "<YOUR_API_KEY>"
       }
@@ -24,7 +24,7 @@ uvx mcp-server-baidu-maps-enhanced
 }
 ```
 
-**包地址**: https://pypi.org/project/mcp-server-baidu-maps-enhanced/
+**包地址**: https://pypi.org/project/bach-baidu-maps/
 
 ---
 
@@ -58,7 +58,7 @@ uv python install 3.11
 
 ### 获取 MCP Server
 
-前往百度地图 Mcp Server 官方[开源仓库](https://github.com/baidu-maps/mcp/tree/main/src/baidu-map/python)下载
+前往百度地图 MCP Server [开源仓库](https://github.com/rongquanfeng/baidu-maps-mcp/tree/main/src/baidu-map/python)下载
 
 ### 配置本地项目
 

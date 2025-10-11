@@ -5,7 +5,7 @@
 ### 快速开始
 
 ```bash
-uvx mcp-server-baidu-maps-enhanced
+uvx bach-baidu-maps
 ```
 
 ### 在 Cursor / Cherry Studio 中配置
@@ -17,7 +17,7 @@ uvx mcp-server-baidu-maps-enhanced
   "mcpServers": {
     "baidu-maps-enhanced": {
       "command": "uvx",
-      "args": ["mcp-server-baidu-maps-enhanced"],
+      "args": ["bach-baidu-maps"],
       "env": {
         "BAIDU_MAPS_API_KEY": "<YOUR_API_KEY>"
       }
@@ -34,20 +34,20 @@ uvx mcp-server-baidu-maps-enhanced
 ### 使用 pip 安装
 
 ```bash
-pip install mcp-server-baidu-maps-enhanced
+pip install bach-baidu-maps
 ```
 
 ### 使用 pipx 安装
 
 ```bash
-pipx install mcp-server-baidu-maps-enhanced
+pipx install bach-baidu-maps
 ```
 
 ### 启动服务
 
 ```bash
 export BAIDU_MAPS_API_KEY="<YOUR_API_KEY>"
-mcp-server-baidu-maps-enhanced
+bach-baidu-maps
 ```
 
 ## 🌟 功能特性
@@ -139,14 +139,14 @@ mcp-server-baidu-maps-enhanced
 
 ## 📚 更多资源
 
-- **PyPI**: https://pypi.org/project/mcp-server-baidu-maps-enhanced/
-- **原项目**: https://github.com/baidu-maps/mcp
+- **PyPI**: https://pypi.org/project/bach-baidu-maps/
+- **项目仓库**: https://github.com/rongquanfeng/baidu-maps-mcp
 - **百度地图开放平台**: https://lbsyun.baidu.com/
 - **API 文档**: https://lbsyun.baidu.com/index.php?title=webapi
 
 ## 🆚 与原版的区别
 
-`mcp-server-baidu-maps-enhanced` 是百度地图 MCP Server 的增强版本：
+`bach-baidu-maps` 是百度地图 MCP Server 的增强版本：
 
 - ✅ 支持 UVX 一键启动
 - ✅ 优化的包依赖管理
@@ -187,4 +187,3 @@ MIT License
 ---
 
 **Happy Mapping! 🗺️**
-

@@ -1,11 +1,11 @@
 [project]
-name = "mcp-server-baidu-maps-enhanced"
-version = "1.0.0"
+name = "bach-baidu-maps"
+version = "1.0.1"
 description = "MCP Server Baidu Maps Enhanced - HTTP call Baidu Map API for MCP"
 readme = "README.md"
 requires-python = ">=3.11"
-authors = [{ name = "Feng Rongquan", email = "kirifeng@example.com" }]
-keywords = ["http", "mcp", "map", "baidu", "baidu-maps", "fastmcp"]
+authors = [{ name = "bachstudio", email = "bachstudio@example.com" }]
+keywords = ["mcp", "map", "baidu", "baidu-maps", "fastmcp", "http"]
 license = { text = "MIT" }
 dependencies = [
     "mcp[cli]>=1.9.0",
@@ -13,12 +13,12 @@ dependencies = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/baidu-maps/mcp"
-"Repository" = "https://github.com/baidu-maps/mcp"
-"Bug Reports" = "https://github.com/baidu-maps/mcp/issues"
+"Homepage" = "https://github.com/rongquanfeng/baidu-maps-mcp"
+"Repository" = "https://github.com/rongquanfeng/baidu-maps-mcp"
+"Bug Reports" = "https://github.com/rongquanfeng/baidu-maps-mcp/issues"
 
 [project.scripts]
-mcp-server-baidu-maps-enhanced = "mcp_server_baidu_maps:main"
+bach-baidu-maps = "mcp_server_baidu_maps:main"
 
 [build-system]
 requires = ["setuptools>=61.0", "wheel"]
