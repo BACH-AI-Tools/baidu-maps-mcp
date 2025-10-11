@@ -1,11 +1,11 @@
 {
   "name": "@baidumap/mcp-server-baidu-map",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "MCP server for using the Baidu Map API",
   "license": "MIT",
   "author": "",
-  "homepage": "",
-  "bugs": "",
+  "homepage": "https://github.com/BACH-AI-Tools/baidu-maps-mcp",
+  "bugs": "https://github.com/BACH-AI-Tools/baidu-maps-mcp/issues",
   "type": "module",
   "bin": {
     "mcp-server-baidu-map": "dist/index.js"

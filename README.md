@@ -10,7 +10,7 @@
 <!-- icon -->
 <br>
 
-[![stars](https://img.shields.io/github/stars/rongquanfeng/baidu-maps-mcp?color=ccf)](https://github.com/rongquanfeng/baidu-maps-mcp)
+[![stars](https://img.shields.io/github/stars/BACH-AI-Tools/baidu-maps-mcp?color=ccf)](https://github.com/BACH-AI-Tools/baidu-maps-mcp)
 ![python](https://img.shields.io/badge/python-3.11+-aff.svg)
 [![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![pypi](https://img.shields.io/pypi/v/bach-baidu-maps)](https://pypi.org/project/bach-baidu-maps/)
@@ -174,13 +174,13 @@ See [SSE Quickstart](https://lbsyun.baidu.com/faq/api?title=mcpserver/quickstart
 
 ## 👩‍👩‍👧‍👦 Contributors
 
-<a href="https://github.com/rongquanfeng/baidu-maps-mcp/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=rongquanfeng/baidu-maps-mcp&max=400&columns=20"  width="200"/>
+<a href="https://github.com/BACH-AI-Tools/baidu-maps-mcp/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=BACH-AI-Tools/baidu-maps-mcp&max=400&columns=20"  width="200"/>
 </a>
 
 ## 🌟 Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=rongquanfeng/baidu-maps-mcp&type=Date)](https://star-history.com/#rongquanfeng/baidu-maps-mcp&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=BACH-AI-Tools/baidu-maps-mcp&type=Date)](https://star-history.com/#BACH-AI-Tools/baidu-maps-mcp&Date)
 
 ## 📄 License
 

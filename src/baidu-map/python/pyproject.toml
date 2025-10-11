@@ -1,6 +1,6 @@
 [project]
 name = "bach-baidu-maps"
-version = "1.0.1"
+version = "1.0.2"
 description = "MCP Server Baidu Maps Enhanced - HTTP call Baidu Map API for MCP"
 readme = "README.md"
 requires-python = ">=3.11"
@@ -13,9 +13,9 @@ dependencies = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/rongquanfeng/baidu-maps-mcp"
-"Repository" = "https://github.com/rongquanfeng/baidu-maps-mcp"
-"Bug Reports" = "https://github.com/rongquanfeng/baidu-maps-mcp/issues"
+"Homepage" = "https://github.com/BACH-AI-Tools/baidu-maps-mcp"
+"Repository" = "https://github.com/BACH-AI-Tools/baidu-maps-mcp"
+"Bug Reports" = "https://github.com/BACH-AI-Tools/baidu-maps-mcp/issues"
 
 [project.scripts]
 bach-baidu-maps = "mcp_server_baidu_maps:main"
